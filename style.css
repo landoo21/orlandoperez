@@ -1,0 +1,139 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 40px;
+
+   
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h5 {
+    margin: auto;
+}
+
+span {
+font-size: 13px;
+}
+
+section{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+section.header img {
+    
+    --scale: 164px;
+    width: var(--scale);
+    height: var(--scale);
+    border-radius: 24px;
+}
+
+.linktree-nav {
+    margin: 40px auto 0;
+    width: 95%;
+    max-width: 700px;
+}
+
+.linktree-nav ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+}
+
+.linktree-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.linktree-box {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding: 12px 12px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    background: #fff;
+   
+}
+
+.linktree-box:hover {
+    transform: scale(1.02);
+}
+
+.linktree-box .icon-box {
+    --scale: 68px;
+  width: var(--scale);
+  height: var(--scale);
+  font-size: 1.25rem;
+  background: hsl(var(--color), 30%);
+  color: hsl(var(--color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+section.header img + h3 {
+    margin: 16px 0 0px;
+}
+/* section.header img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}*/
+
+section.links .link-item{
+    width: 100%;
+    margin-bottom: 16px;
+}
+section.links .link-item a{
+    display: block;
+    width: 100%;
+    border: 1px #000 solid;
+    padding: 16px;
+}
+
+@media (min-width: 600px) {
+    .linktree-nav ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .bg {
+    z-index: -1;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
